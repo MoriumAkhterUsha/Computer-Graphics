@@ -1,0 +1,195 @@
+#include <windows.h>  // for MS Windows
+#include <GL/glut.h>  // GLUT, include glu.h and gl.h
+
+void display() {
+glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to white and opaque
+glClear(GL_COLOR_BUFFER_BIT);         // It erases the previous frame and prepares the window for fresh drawing
+
+    //CREATE LINE
+    glBegin(GL_LINES);
+    // X axis (Horizontal)
+    glColor3f(0.5f, 0.5f, 0.5f);//Grey color
+    glVertex2f(-1.0f, 0.0f); //Left
+    glVertex2f(1.0f, 0.0f); //Right
+    glEnd();
+
+     //CREATE QUAD (Square)
+    glBegin(GL_QUADS);
+    glColor3f(0.0f, 1.0f, 1.0f); // Cyan color
+    glVertex2f(-0.5f, 0.0f);   // Vertex 1
+    glVertex2f(0.5f, 0.0f);   // Vertex 2
+    glVertex2f(0.5f, 0.5f);   // Vertex 3
+    glVertex2f(-0.5f, 0.5f);   // Vertex 4
+    glEnd();
+    glLineWidth(2.0f);// to bold the color
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.5f, 0.5f, 0.5f);//Grey color
+    glVertex2f(-0.5f, 0.0f);   // Vertex 1
+    glVertex2f(0.5f, 0.0f);   // Vertex 2
+    glVertex2f(0.5f, 0.5f);   // Vertex 3
+    glVertex2f(-0.5f, 0.5f);
+    glEnd();
+
+//triangle
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.8f, 0.8f, 0.8f);//Light Grey Color
+    glVertex2f(-0.6f, 0.5f); // Vertex 1
+    glVertex2f(0.6f, 0.5f); // Vertex 2
+    glVertex2f(0.0f, 0.9f); // Vertex 3
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.5f, 0.5f, 0.5f);//Grey Color
+    glVertex2f(-0.6f, 0.5f); // Vertex 1
+    glVertex2f(0.6f, 0.5f); // Vertex 2
+    glVertex2f(0.0f, 0.9f); // Vertex 3
+    glEnd();
+
+//windows
+    glBegin(GL_QUADS);
+    glColor3f(1.0f, 1.0f, 0.0f);//Yellow Color
+    glVertex2f(-0.4f, 0.3f);   // Vertex 1
+    glVertex2f(-0.3f, 0.3f);   // Vertex 2
+    glVertex2f(-0.3f, 0.4f);   // Vertex 3
+    glVertex2f(-0.4f, 0.4f);   // Vertex 4
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(1.0f, 0.7f, 0.0f);//Orange Color
+    glVertex2f(-0.4f, 0.3f);   // Vertex 1
+    glVertex2f(-0.3f, 0.3f);   // Vertex 2
+    glVertex2f(-0.3f, 0.4f);   // Vertex 3
+    glVertex2f(-0.4f, 0.4f);   // Vertex 4
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3f(1.0f, 1.0f, 0.0f);//Yellow Color
+    glVertex2f(0.4f, 0.3f);   // Vertex 1
+    glVertex2f(0.3f, 0.3f);   // Vertex 2
+    glVertex2f(0.3f, 0.4f);   // Vertex 3
+    glVertex2f(0.4f, 0.4f);   // Vertex 4
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(1.0f, 0.7f, 0.0f);//Orange Color
+    glVertex2f(0.4f, 0.3f);   // Vertex 1
+    glVertex2f(0.3f, 0.3f);   // Vertex 2
+    glVertex2f(0.3f, 0.4f);   // Vertex 3
+    glVertex2f(0.4f, 0.4f);    // Vertex 4
+    glEnd();
+//door
+    glBegin(GL_QUADS);
+    glColor3f(1.0f, 1.0f, 0.0f);//Yellow Color
+    glVertex2f(-0.2f, 0.0f);   // Vertex 1
+    glVertex2f(0.2f, 0.0f);   // Vertex 2
+    glVertex2f(0.2f, 0.35f);   // Vertex 3
+    glVertex2f(-0.2f, 0.35f);   // Vertex 4
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(1.0f, 0.7f, 0.0f);//Orange Color
+    glVertex2f(-0.2f, 0.0f);   // Vertex 1
+    glVertex2f(0.2f, 0.0f);   // Vertex 2
+    glVertex2f(0.2f, 0.35f);   // Vertex 3
+    glVertex2f(-0.2f, 0.35f);     // Vertex 4
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(1.0f, 0.7f, 0.0f);//Orange Color
+    glVertex2f(0.0f, 0.0f);   // Vertex 1
+    glVertex2f(0.0f, 0.35f);   // Vertex 2
+    glEnd();
+
+    // Wind mill(lower part)
+    glBegin(GL_QUADS);
+    glColor3f(0.9f, 0.9f, 0.9f);// Light Gray Color
+    glVertex2f(0.8f, 0.0f);   // Vertex 1
+    glVertex2f(0.85f, 0.0f);   // Vertex 2
+    glVertex2f(0.85f, 0.6f);   // Vertex 3
+    glVertex2f(0.8f, 0.6f);   // Vertex 4
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.5f, 0.5f, 0.5f);// Grey Color
+    glVertex2f(0.8f, 0.0f);   // Vertex 1
+    glVertex2f(0.85f, 0.0f);   // Vertex 2
+    glVertex2f(0.85f, 0.6f);   // Vertex 3
+    glVertex2f(0.8f, 0.6f);   // Vertex 4
+    glEnd();
+
+    // Wind mill(upper part)
+    glBegin(GL_QUADS);
+    glColor3f(0.9f, 0.9f, 0.9f);// Light Grey Color
+    glVertex2f(0.79f, 0.6f);   // Vertex 1
+    glVertex2f(0.86f, 0.6f);   // Vertex 2
+    glVertex2f(0.86f, 0.68f);   // Vertex 3
+    glVertex2f(0.79f, 0.68f);   // Vertex 4
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.5f, 0.5f, 0.5f);// Grey Color
+    glVertex2f(0.79f, 0.6f);   // Vertex 1
+    glVertex2f(0.86f, 0.6f);   // Vertex 2
+    glVertex2f(0.86f, 0.68f);   // Vertex 3
+    glVertex2f(0.79f, 0.68f);   // Vertex 4
+    glEnd();
+
+    //Wind Turbine(Yellow)
+    glBegin(GL_TRIANGLES);
+    glColor3f(1.0f, 1.0f, 0.0f);//Light Yellow Color
+    glVertex2f(0.8f, 0.65f); // Vertex 1
+    glVertex2f(0.7f, 0.65f); // Vertex 2
+    glVertex2f(0.65f, 0.5f); // Vertex 3
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.5f, 0.5f, 0.5f);
+    glVertex2f(0.8f, 0.65f); // Vertex 1
+    glVertex2f(0.7f, 0.65f); // Vertex 2
+    glVertex2f(0.65f, 0.5f); // Vertex 3
+    glEnd();
+
+     //Wind Turbine(Red)
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.999f, 0.0f, 0.0f);//Red Color
+    glVertex2f(0.82f, 0.66f); // Vertex 1
+    glVertex2f(0.9f, 0.7f); // Vertex 2
+    glVertex2f(0.85f, 0.9f); // Vertex 3
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.5f, 0.5f, 0.5f);
+    glVertex2f(0.82f, 0.66f); // Vertex 1
+    glVertex2f(0.9f, 0.7f); // Vertex 2
+    glVertex2f(0.85f, 0.9f); // Vertex 3
+    glEnd();
+
+     //Wind Turbine(Green)
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.0f, 0.999f, 0.0f);//Light Green Color
+    glVertex2f(0.81f, 0.63f); // Vertex 1
+    glVertex2f(0.85, 0.5f); // Vertex 2
+    glVertex2f(0.95f, 0.45f); // Vertex 3
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.5f, 0.5f, 0.5f);
+    glVertex2f(0.81f, 0.63f); // Vertex 1
+    glVertex2f(0.85, 0.5f); // Vertex 2
+    glVertex2f(0.95f, 0.45f);  // Vertex 3
+    glEnd();
+    //Forces OpenGL to actually draw all the shapes on the screen.
+glFlush();  //Forces OpenGL to display everything. It's like saying (Done! Show it!)
+}
+
+/* Main function: GLUT runs as a console application starting at main()  */
+int main(int argc, char** argv) {
+glutInit(&argc, argv);                 // Initialize GLUT
+ // Create a window with the given title
+glutInitWindowSize(541, 364);
+glutCreateWindow("CGLabTask");   // Set the window's initial width & height
+glutDisplayFunc(display); // Link display function
+glutMainLoop();           // They keep doing this until the office closes (program ends).
+return 0;
+}
