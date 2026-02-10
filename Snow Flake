@@ -1,0 +1,171 @@
+#include <windows.h>      // Needed for Windows systems
+#include <GL/glut.h>      // Include the GLUT library (OpenGL Utility Toolkit)
+
+GLfloat i = 0.0f;         // A variable to control rotation angle
+
+// Initialize OpenGL settings
+void initGL()
+{
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // Set background color to black
+}
+
+// This function runs when the system is idle (not processing input). It is used to continuously update the screen.
+void Idle()
+{
+    glutPostRedisplay();  // Request to redraw the window
+}
+
+// The main drawing function
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer
+    glLoadIdentity();             // Reset the current matrix (start fresh)
+
+    glPushMatrix();               // Save current transformation matrix (start new transformation)
+
+    glRotatef(i, 0.0, 0.0, 1.0);  // Rotate by 'i' degrees. i is the angle Because i is changing over time.
+    //in 2D rotation, the object lies in the XY-plane, and rotation happens around the Z-axis.
+
+
+    
+    //long lines
+    glBegin(GL_LINES);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.0f, 0.55f);
+        glVertex2f(0.0f, -0.55f);
+    glEnd();
+
+    glBegin(GL_LINES);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.55f, 0.0f);
+        glVertex2f(-0.55f, 0.0f);
+    glEnd();
+
+    glBegin(GL_LINES);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.5f, 0.5f);
+        glVertex2f(0.5f, -0.5f);
+    glEnd();
+
+    glBegin(GL_LINES);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.5f, -0.5f);
+        glVertex2f(0.5f, 0.5f);
+    glEnd();
+//small lines
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.1f, 0.5f);
+        glVertex2f(0.0f, 0.4f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.1f, 0.5f);
+        glVertex2f(0.0f, 0.4f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.1f, -0.5f);
+        glVertex2f(0.0f, -0.4f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.1f, -0.5f);
+        glVertex2f(0.0f, -0.4f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.5f, 0.1f);
+        glVertex2f(0.4f, 0.0f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.5f, -0.1f);
+        glVertex2f(0.4f, 0.0f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.5f, 0.1f);
+        glVertex2f(-0.4f, 0.0f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.5f, -0.1f);
+        glVertex2f(-0.4f, 0.0f);
+    glEnd();
+
+     glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.3f, 0.3f);
+        glVertex2f(-0.3f, 0.45f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.3f, 0.3f);
+        glVertex2f(-0.45f, 0.3f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.3f, -0.3f);
+        glVertex2f(0.3f, -0.45f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.3f, -0.3f);
+        glVertex2f(0.45f, -0.3f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.3f, 0.3f);
+        glVertex2f(0.3f, 0.45f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(0.3f, 0.3f);
+        glVertex2f(0.45f, 0.3f);
+    glEnd();
+
+     glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.3f, -0.3f);
+        glVertex2f(-0.3f, -0.45f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f(0.0f, 1.0f, 1.0f);
+        glVertex2f(-0.3f, -0.3f);
+        glVertex2f(-0.45f, -0.3f);
+    glEnd();
+    glLineWidth(2.0f);// to bold the lines
+
+    glPopMatrix();             // Restore the original/previous matrix (before transformation)
+
+    i -= 0.1f;                 // Slowly increase rotation angle, clockwise, if i += 0.1f; then anti clockwise rotation
+
+    glFlush();                 // Show the drawing
+}
+
+// Main function - program starts here
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);              // Initialize GLUT
+    glutInitWindowSize(320, 320);       // Set window size (width x height)
+    glutCreateWindow("CG_LabTask"); // Create a window with a title
+    glutDisplayFunc(display);           // Tell GLUT to use the 'display' function to draw
+    initGL();                           // Call the initialization function
+    glutIdleFunc(Idle);                 // Tell GLUT to call 'Idle' when there's nothing else to do
+    glutMainLoop();                     // Enter the main event loop (keeps app running)
+    return 0;                           // End of program
+}
